@@ -1,0 +1,48 @@
+
+.andinanet-info{
+    padding: 20px 0px 20px 0px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+}
+
+.andinanet-info .a-container h1{
+    font-size: 32px;
+    font-family: "Montserrat";
+    line-height: 24px;
+    width: 700;
+    align-content: center;
+    color: #03318C;
+} 
+.andinanet-info .a-container p{
+    font-size: 18px;
+    width: 400;
+    line-height: 26px;
+    font-family: "Montserrat";
+    color:  #000000;
+}
+.andinanet-info .a-container h3{ 
+    color: #034C8C;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.andinanet-info .andinanet-info__container--text{
+    display: flex;
+    max-width: 55%;
+}
+
+.andinanet-info .andinanet-info__container--imagen{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.andinanet-info__container--text .text{
+    text-align: center;
+    padding: 20px, 0px, 20px, 0px;
+}
+

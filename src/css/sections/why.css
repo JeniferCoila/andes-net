@@ -1,0 +1,46 @@
+.andinanet-why{
+    padding: 20px 0px 20px 0px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    height: 549px;
+    width: 1165px;      
+      
+}
+.andinanet-why .a-container h1{
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #03318C;   
+} 
+.andinanet-why .a-container ul{
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: justify;
+    font-size: 16px;
+}
+.andinanet-why .andinanet-why__container-text{
+    display: flex;
+    max-width: 55%;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: justify;
+    
+}
+.andinanet-why .andinanet-why__container-imagen{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 540px;
+    height: 300px;
+    top: 120px;
+    left: 762px;
+}
