@@ -1,0 +1,80 @@
+.andinanet-callus {
+    background: linear-gradient(90deg, rgba(3, 49, 140, 1) 0%, rgba(3, 76, 140, 1) 50%, rgba(3, 117, 140, 1) 100%);
+
+}
+.a-container-andinanet-callus__container {
+
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    height: 392px;
+
+}
+
+.a-container-andinanet-callus__container_imgchica {
+    height: 300px;
+    width: 442.65;
+}
+
+.a-container-andinanet-callus__container_group-of-text-call-us {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.a-container-andinanet-callus__container_group-of-text-call-us__llamanos {
+
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat";
+    font-size: 40px;
+    color: #ffff;
+    width: 317px;
+    line-height: 40px;
+    height: 131px;
+    margin: 0px;
+    font-weight: 550;
+
+}
+
+.a-container-andinanet-callus__container_group-of-text-call-us_butom_GHZ {
+
+    height: 30.92px;
+    width: 146.9px;
+    border-radius: 30px;
+    background-color: #EFC42C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.a-container-andinanet-callus__container_group-of-text-call-us_butom_GHZ_text {
+
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #000000;
+    width: 156.1px;
+    line-height: 32px;
+    font-weight: bold;
+
+
+}
+
+.a-container-andinanet-callus__container_group-of-text-call-us_fibra {
+
+    display: flex;
+    align-items: flex-end;
+    font-family: "Montserrat";
+    font-size: 32px;
+    color: #ffff;
+    width: 498px;
+    line-height: 30px;
+    margin: 0px;
+    height: 52.96px;
+
+}
