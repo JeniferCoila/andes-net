@@ -1,0 +1,28 @@
+@import url(sections/banner.css);
+@import url(sections/benefits.css);
+@import url(sections/callus.css);
+@import url(sections/footer.css);
+@import url(sections/info.css);
+@import url(sections/nav.css);
+@import url(sections/plans.css);
+@import url(sections/why.css);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 22px;
+    min-width: 300px;
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.a-container {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+

@@ -1,0 +1,26 @@
+{
+  "name": "andesnet",
+  "version": "1.0.0",
+  "description": "Landing Page de Proveedor de Internet",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeniferCoila/andes-net.git"
+  },
+  "keywords": [
+    "an"
+  ],
+  "author": "Jeni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeniferCoila/andes-net/issues"
+  },
+  "homepage": "https://github.com/JeniferCoila/andes-net#readme",
+  "dependencies": {
+    "swiper": "^11.0.7"
+  }
+}
