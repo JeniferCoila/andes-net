@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -20,9 +24,76 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
 .a-container {
     max-width: 1200px;
     margin: auto;
+    padding: 60px 0;
     height: 100%;
+}
+
+.a-tc--blue {
+    color: #03318C;
+}
+
+.a-tc--black {
+    color: #000;
+}
+
+.a-tc--white {
+    color: #fff;
+}
+
+.a-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+button {
+    min-width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #034C8C;
+    padding: 8px;
+    border: 1px solid #034C8C;
+    cursor: pointer;
+}
+
+button span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #fff;
+}
+
+.swiper-pagination {
+    bottom: -10% !important;
+}
+
+.andesnet-bullet.swiper-pagination-bullet-active {
+    background-color: #03318C !important;
+
+}
+.andesnet-bullet.swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    background-color: #D9D9D9;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    color: #03318C;
+}
+
+.swiper-button-prev {
+    left: -5%;
+}
+
+.swiper-button-next {
+    right: -5%;
 }
 

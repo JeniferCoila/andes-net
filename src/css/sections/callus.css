@@ -1,16 +1,20 @@
 .andinanet-callus {
     background: linear-gradient(90deg, rgba(3, 49, 140, 1) 0%, rgba(3, 76, 140, 1) 50%, rgba(3, 117, 140, 1) 100%);
-
+    height: auto;
+    @media screen and (min-width: 768px) {
+        height: 392px;
+    }
 }
 .a-container-andinanet-callus__container {
-
+    height: 100%;
     margin-top: 100px;
     display: flex;
     align-items: center;
-    align-content: center;
     justify-content: space-evenly;
-    height: 392px;
-
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
 }
 
 .a-container-andinanet-callus__container_imgchica {

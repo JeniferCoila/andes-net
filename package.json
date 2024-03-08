@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Landing Page de Proveedor de Internet",
   "main": "index.js",
+  "type": "module" ,
   "scripts": {
     "test": "npm run test",
     "start": "node server.js"
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/JeniferCoila/andes-net#readme",
   "dependencies": {
     "swiper": "^11.0.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.3"
   }
 }
