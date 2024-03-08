@@ -1,6 +1,6 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-new Swiper(".andinanet-plans__cards", {
+new Swiper(".andesnet-plans__cards", {
   slidesPerView: 1,
   spaceBetween: 20,
   pagination: {
@@ -24,7 +24,7 @@ new Swiper(".andinanet-plans__cards", {
   },
 });
 
-new Swiper(".andinanet-benefits__cards", {
+new Swiper(".andesnet-benefits__cards", {
     slidesPerView: 1,
     spaceBetween: 20,
     pagination: {

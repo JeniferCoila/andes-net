@@ -1,5 +1,5 @@
 
-.andinanet-info{
+.andesnet-info{
     padding: 20px 0px 20px 0px;
     border-radius: 20px;
     display: flex;
@@ -11,17 +11,17 @@
     }
 }
 
-.andinanet-info .a-container {
+.andesnet-info .a-container {
     padding: 0;
 }
 
-.andinanet-info .a-container p{
+.andesnet-info .a-container p{
     font-size: 18px;
     width: 400;
     line-height: 26px;
     color:  #000000;
 }
-.andinanet-info .a-container h3{ 
+.andesnet-info .a-container h3{ 
     color: #034C8C;
     font-size: 18px;
     font-weight: 700;
@@ -30,14 +30,14 @@
     text-align: center;
 }
 
-.andinanet-info .andinanet-info__container--text{
+.andesnet-info .andesnet-info__container--text{
     display: flex;
     @media screen and (min-width: 1024px) {
         max-width: 55%;
     }
 }
 
-.andinanet-info .andinanet-info__container--imagen{
+.andesnet-info .andesnet-info__container--imagen{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -46,7 +46,7 @@
         top: 0;
     }
 }
-.andinanet-info__container--text .text{
+.andesnet-info__container--text .text{
     text-align: center;
     padding: 20px, 0px, 20px, 0px;
 }

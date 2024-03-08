@@ -1,7 +1,7 @@
 @import url(modal/modal.css);
 @import url(modal/form.css);
 
-.andinanet-banner{
+.andesnet-banner{
     min-height: 400px;
     background-color: #03318C;
     background-image: url(../../assets/img/andesnet-banner_bg.png);
@@ -11,7 +11,7 @@
     }
 }
 
-.andinanet-banner__container {
+.andesnet-banner__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,20 +23,20 @@
     }
 }
 
-.andinanet-banner__container--text {
+.andesnet-banner__container--text {
     padding-bottom: 10%;
 }
 
-.andinanet-banner__container--text h1,
-.andinanet-banner__container--text h2,
-.andinanet-banner__container--text h3,
-.andinanet-banner__container--text span,
-.andinanet-banner__container--text p{
+.andesnet-banner__container--text h1,
+.andesnet-banner__container--text h2,
+.andesnet-banner__container--text h3,
+.andesnet-banner__container--text span,
+.andesnet-banner__container--text p{
     color: #fff;
     margin: 0;
 }
 
-.andinanet-banner__container--text h1.andinanet-banner__title {
+.andesnet-banner__container--text h1.andesnet-banner__title {
     margin: 0;
     font-size: 48px;
     font-weight: 600;
@@ -44,34 +44,34 @@
     margin-bottom: 10px;
 }
 
-h1.andinanet-banner__title p {
+h1.andesnet-banner__title p {
     margin: 0;
     font-size: 32px;
     font-weight: 600;
     line-height: 39px;
 }
 
-h1.andinanet-banner__title span {
+h1.andesnet-banner__title span {
     font-family: "League Spartan", sans-serif;
     font-size: 48px;
     font-weight: 700;
     line-height: 50px;
 }
 
-h2.andinanet-banner__offer {
+h2.andesnet-banner__offer {
     font-size: 40px;
     font-weight: 600;
     line-height: 49px;
     color: #EFC42C;
 }
 
-h3.andinanet-banner__dscto {
+h3.andesnet-banner__dscto {
     font-size: 40px;
     font-weight: 600;
     line-height: 49px;
 }
 
-h3.andinanet-banner__dscto span {
+h3.andesnet-banner__dscto span {
     color: #000;
     border-radius: 15px;
     background-color: #EFC42C;

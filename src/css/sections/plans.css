@@ -1,30 +1,34 @@
-.andinanet-plans__container {
+.andesnet-plans {
+    overflow: hidden;
+}
+
+.andesnet-plans__container {
     padding: 65px 0;
 }
 
-.andinanet-plans h3,
-.andinanet-plans h4,
-.andinanet-plans p {
+.andesnet-plans h3,
+.andesnet-plans h4,
+.andesnet-plans p {
     margin: 0;
 }
 
-/* .andinanet-plans__cards .swiper-wrapper {
+/* .andesnet-plans__cards .swiper-wrapper {
     overflow: hidden;
 } */
 
 
-.andinanet-plans__title {
+.andesnet-plans__title {
     font-size: 32px;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
 }
 
-.andinanet-plans__cards {
+.andesnet-plans__cards {
     position: relative;    
 }
 
-.andinanet-plans__card {
+.andesnet-plans__card {
     text-align: center;
     width: 270px;
     height: 507px;
@@ -33,11 +37,11 @@
     border-radius: 10px;
 }
 
-.andinanet-plans__card.no-promo .card--title {
+.andesnet-plans__card.no-promo .card--title {
     height: 53px;
 }
 
-.andinanet-plans__card.no-promo .card--price {
+.andesnet-plans__card.no-promo .card--price {
     margin-bottom: 26px;
 }
 
@@ -70,7 +74,7 @@ h3.card--doublevel {
     line-height: 20px;
 }
 
-.andinanet-plans__card-main-ribbon {
+.andesnet-plans__card-main-ribbon {
     height: 64px;
     display: flex;
     flex-direction: column;
@@ -94,7 +98,7 @@ h3.card--doublevel {
     font-size: 20px;
 }
 
-.andinanet-plans__card-price {
+.andesnet-plans__card-price {
     margin: 25px 0;
 }
 
@@ -148,7 +152,7 @@ small.card--price-disclaimer {
     min-width: 175px;
 }
 
-.andinanet-plans__card-benefits {
+.andesnet-plans__card-benefits {
     gap: 20px;
     display: flex;
     justify-content: center;

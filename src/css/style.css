@@ -11,9 +11,6 @@
     box-sizing: border-box;
 }
 
-html {
-    overflow-x: hidden;
-}
 
 body {
     padding: 0;
@@ -33,6 +30,7 @@ img {
     margin: auto;
     padding: 60px 0;
     height: 100%;
+    overflow: hidden;
 }
 
 .a-tc--blue {

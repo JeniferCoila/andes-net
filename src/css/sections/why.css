@@ -1,4 +1,4 @@
-.andinanet-why{
+.andesnet-why{
     padding: 20px 0px 20px 0px;
     border-radius: 20px;
     display: flex;
@@ -6,7 +6,7 @@
     min-height: 549px;      
 }
 
-.andinanet-why .a-container {
+.andesnet-why .a-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,7 @@
     }
 }
 
-.andinanet-why .a-container ul{
+.andesnet-why .a-container ul{
     font-family: "Montserrat";
     font-size: 16px;
     font-weight: 400;
@@ -26,12 +26,12 @@
     font-size: 16px;
 }
 
-.andinanet-why .a-container li{
+.andesnet-why .a-container li{
     list-style-type: none;
     position: relative;
 }
 
-.andinanet-why .a-container li::before {
+.andesnet-why .a-container li::before {
     content: '';
     position: absolute;
     height: 20px;
@@ -41,7 +41,7 @@
 
 }
 
-.andinanet-why .andinanet-why__container-text{
+.andesnet-why .andesnet-why__container-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
