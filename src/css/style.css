@@ -6,6 +6,7 @@
 @import url(sections/nav.css);
 @import url(sections/plans.css);
 @import url(sections/why.css);
+@import url(sections/floating.css);
 
 * {
     box-sizing: border-box;
@@ -95,3 +96,19 @@ button span {
     right: -5%;
 }
 
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.fadeLeft {
+    animation: fadeLeft 1s ease forwards;
+  }
+  

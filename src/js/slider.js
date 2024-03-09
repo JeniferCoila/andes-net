@@ -3,6 +3,7 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs
 new Swiper(".andesnet-plans__cards", {
   slidesPerView: 1,
   spaceBetween: 20,
+  autoHeight: true,
   pagination: {
     el: ".swiper-pagination",
     bulletClass: "swiper-pagination-bullet andesnet-bullet",
