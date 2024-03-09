@@ -1,4 +1,3 @@
-
 export default (form) => {
     class Form {
       constructor() {
@@ -18,7 +17,7 @@ export default (form) => {
             client_id: 0,
             dateRegister: '',
             id_register: 0,
-            chosen_plan: '200'
+            plan: ''
         }
 
       }
@@ -92,8 +91,8 @@ export default (form) => {
       sendForm() {
         const date = new Date()/1000;
         this.registerData.dateRegister = date;
-        this.registerData.id_register = Math.floor(Math.random() * 100);
-
+        this.registerData.id_register = "id" + Math.random().toString(16).slice(2);
+        this.registerData.plan = this.formBanner.querySelector('input[name="plan"]').dataset.plan;
         this.formBanner.classList.add("andesnet-modal--hide");
         this.formLoading.classList.remove("andesnet-modal--hide");
         this.formLoading.classList.add("andesnet-modal--show");

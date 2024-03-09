@@ -13,7 +13,13 @@ export default () => {
 
         for (let i = 0; i <  this.modalOpener.length; i++) {
             const modal = this.modalOpener[i];
-            modal.addEventListener('click', function() {
+            modal.addEventListener('click', function(event) {
+                const btnCard = event.target.parentElement;
+                const chosenPlan = btnCard.dataset.plan;
+                if(chosenPlan) {
+                    $this.modalCtn.querySelector('input[name="plan"]').dataset.plan = chosenPlan;
+                }
+                
                 $this.modalCtn.style.display = "block";
             })
         }
