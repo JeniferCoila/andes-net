@@ -1,3 +1,4 @@
+
 export default (form) => {
     class Form {
       constructor() {
@@ -12,6 +13,13 @@ export default (form) => {
         this.fields = [".form-phone", ".form-id"];
         this.validateForm = true;
 
+        this.registerData = {
+            phone: 0,
+            client_id: 0,
+            dateRegister: '',
+            id_register: 0,
+            chosen_plan: '200'
+        }
 
       }
 
@@ -34,13 +42,13 @@ export default (form) => {
       validateFields(field) {
         let pattern = '';
         let errorMsg = '';
-        // check for a valid email address
+        // Validación de datos ingresados
         switch (field.name) {
             case "phone":
                 pattern = /^-?\d+$/;
                 errorMsg = "Por favor ingrese un número válido";
                 break;
-            case "id":
+            case "client_id":
                 pattern = /^-?\d+$/;
                 errorMsg = "Por favor ingrese un DNI válido";
                 break;
@@ -48,11 +56,11 @@ export default (form) => {
                 break;
         }
 
-        console.log(field.value)
 
         switch (pattern.test(field.value)) {
             case true:
                 this.setStatus(field, null, "success");
+                this.registerData[field.name] = field.value;
                 break;
         
             default:
@@ -82,6 +90,10 @@ export default (form) => {
       }
 
       sendForm() {
+        const date = new Date()/1000;
+        this.registerData.dateRegister = date;
+        this.registerData.id_register = Math.floor(Math.random() * 100);
+
         this.formBanner.classList.add("andesnet-modal--hide");
         this.formLoading.classList.remove("andesnet-modal--hide");
         this.formLoading.classList.add("andesnet-modal--show");
@@ -101,6 +113,7 @@ export default (form) => {
                 this.formSuccess.classList.remove("andesnet-modal--show");
 
                 const $this = this;
+                console.log(this.registerData, 'DATOS REGISTRADOS')
                 $this.fields.forEach((field) => {
                     let input = $this.formBanner.querySelector(`${field}`);
                     $this.emptyValues(input);

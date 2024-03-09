@@ -10,7 +10,6 @@ export default () => {
       openModal() {
 
         const $this = this;
-        console.log(this.modalCtn)
 
         for (let i = 0; i <  this.modalOpener.length; i++) {
             const modal = this.modalOpener[i];
@@ -32,7 +31,6 @@ export default () => {
         const $this = this;
 
         window.onclick = function(event) {
-            console.log(event.target, $this.modalCtn)
             if (event.target == $this.modalCtn) {
                 $this.modalCtn.style.display = "none";
             }
