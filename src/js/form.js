@@ -105,6 +105,7 @@ export default (form) => {
               this.formLoading.classList.remove("andesnet-modal--show");
 
               setTimeout(() => {
+                console.log(this.registerData, 'DATOS REGISTRADOS')
                 this.formBanner.classList.remove("andesnet-modal--hide");
                 this.formBanner.classList.add("andesnet-modal--show");
 
@@ -112,7 +113,6 @@ export default (form) => {
                 this.formSuccess.classList.remove("andesnet-modal--show");
 
                 const $this = this;
-                console.log(this.registerData, 'DATOS REGISTRADOS')
                 $this.fields.forEach((field) => {
                     let input = $this.formBanner.querySelector(`${field}`);
                     $this.emptyValues(input);
