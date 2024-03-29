@@ -20,7 +20,9 @@ export default () => {
                 <h3 class="card--title a-tc--blue">${dataC.title}</h3>
                 ${(dataC.prom_enabled ? `<h4 class="card--vel">${dataC.vel}Mbps</h4>`: '')}
                 <h3 class="card--doublevel a-tc--blue">
-                    <b class="card--doublevel-qty">${dataC.vel}</b>
+                    <b class="card--doublevel-qty">
+                    ${(dataC.prom_enabled ? `${dataC.promocional_vel}`: `${dataC.vel}`)}
+                    </b>
                     <b class="card--doublevel-mbps">Mbps</b>
                 </h3></div>`
             const ribbon = `<div class="andesnet-plans__card-main-ribbon blue-bg">
@@ -49,7 +51,6 @@ export default () => {
                     <strong class="card--price-dscto">
                         10% dto
                     </strong>`: ``)}
-
                     
                 </div>
                 <small class="card--price-disclaimer">
