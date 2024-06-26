@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JeniferCoila/andes-net.git"
+    "url": "git+https://github.com/JeniferCoila/andesnet.git"
   },
   "keywords": [
     "an"
@@ -18,9 +18,9 @@
   "author": "Jeni",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JeniferCoila/andes-net/issues"
+    "url": "https://github.com/JeniferCoila/andesnet/issues"
   },
-  "homepage": "https://github.com/JeniferCoila/andes-net#readme",
+  "homepage": "https://github.com/JeniferCoila/andesnet#readme",
   "dependencies": {
     "firebase-tools": "^13.4.1",
     "swiper": "^11.0.7"

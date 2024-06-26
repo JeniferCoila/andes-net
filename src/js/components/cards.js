@@ -1,21 +1,37 @@
-import dataCards from './cards-content.json' assert { type: "json" };
-
 export default () => {
   class Cards {
     constructor() {
       this.cardContainer = document.querySelector(".andesnet-plans__cards .swiper-wrapper");
-      this.data = dataCards;
     }
 
-    setCards() {
-      const contentCards = this.getContent();
+    async loadCardData() {
+        try {
+            const response = await fetch('./js/data/cards-content.json');
+            if (!response.ok) {
+                throw new Error('No se pudo cargar el archivo JSON.');
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('Error al cargar el archivo JSON:', error);
+            return []; // Retornar un arreglo vacío o manejar el error según sea necesario
+        }
+    }
+
+    async displayCards() {
+        const cardsData = await this.loadCardData();
+        this.setCards(cardsData);
+    }
+
+    setCards(cards) {
+      const contentCards = this.getContent(cards);
       this.cardContainer.innerHTML = contentCards;
     }
 
-    getContent() {
+    getContent(cards) {
         let content ="";
-        for (let i = 0; i < this.data.length; i++) {
-            const dataC = this.data[i];
+    
+        for (let i = 0; i < cards.length; i++) {
+            const dataC = cards[i];
             const main = `<div class="andesnet-plans__card-main">
                 <h3 class="card--title a-tc--blue">${dataC.title}</h3>
                 ${(dataC.prom_enabled ? `<h4 class="card--vel">${dataC.vel}Mbps</h4>`: '')}
@@ -83,7 +99,7 @@ export default () => {
     }
 
     load() {
-      this.setCards();
+        this.displayCards();
     }
   }
 

@@ -3,7 +3,7 @@ export default () => {
       constructor() {
         
         this.modalOpener = document.querySelectorAll(".modal-opener");
-        this.modalCtn = document.querySelector(".a-modal-container")
+        this.modalCtn = document.querySelector(".a-modal-container");
         this.closeModalItem = this.modalCtn.querySelector(".close");
       }
 

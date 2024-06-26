@@ -1,10 +1,9 @@
-@import url(modal/modal.css);
-@import url(modal/form.css);
+
 
 .andesnet-banner{
     min-height: 400px;
     background-color: #03318C;
-    background-image: url(../../assets/img/andesnet-banner_bg.png);
+    background-image: url(../../../assets/img/andesnet-banner_bg.png);
     background-size: cover;
     @media screen and (min-width: 768px) {
         height: 400px;

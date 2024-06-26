@@ -105,7 +105,6 @@ export default (form) => {
               this.formLoading.classList.remove("andesnet-modal--show");
 
               setTimeout(() => {
-                console.log(this.registerData, 'DATOS REGISTRADOS')
                 this.formBanner.classList.remove("andesnet-modal--hide");
                 this.formBanner.classList.add("andesnet-modal--show");
 
