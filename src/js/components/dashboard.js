@@ -1,8 +1,8 @@
 const datosString = JSON.parse(localStorage.getItem('register'));
 
 if (!datosString) {
-    window.location.href = '';
-    alert("Ingrese información para llamarlo")
+    alert("Ingrese información para llenar la tabla")
+    window.location.href = '/';
 }
 
 let lastId = 1;
