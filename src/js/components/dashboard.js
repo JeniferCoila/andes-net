@@ -156,8 +156,19 @@ function obtenerFechaActual(fechaAux) {
     return `${año}-${mes}-${dia}`;
 }
 
+function redirectLogin() {
+    const userData = sessionStorage.getItem("user-andesnet");
+    const route = window.location.pathname.replace("src/", "");
+    console.log(!userData && route !== "/");
+    if( !userData && route !== "/") {
+        alert("No se ha iniciado sesión");
+        window.location.href = window.location.origin + window.location.pathname.replace("views/dashboard.html","") + "#login";
+    }
+}
+
 /*Guardar*/
 document.addEventListener('DOMContentLoaded', () => {
+    redirectLogin();
     const guardarBtn = document.querySelector('.btn-success');
 
     guardarBtn.addEventListener('click', () => {

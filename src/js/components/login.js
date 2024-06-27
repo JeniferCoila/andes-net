@@ -27,7 +27,11 @@ export default () => {
       if (username !== this.adminUser.username || password !== this.adminUser.password) {
         this.errorMessage.innerHTML = "Credenciales inválidas, intente con admin | admin"
       } else {
-        this.redirectTo('#dashboard');
+        sessionStorage.setItem('user-andesnet', {
+          usernam: username,
+          password: password
+        })
+        this.redirectTo('views/dashboard.html');
       }
 
     }
