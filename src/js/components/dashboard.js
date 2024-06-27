@@ -152,8 +152,6 @@ export default () => {
         }
       });
 
-      setTimeout(() => {}, 1000);
-
       container.appendChild(editButton);
       container.appendChild(deleteButton);
       return container;

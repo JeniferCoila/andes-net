@@ -36,7 +36,7 @@ const loadComponents = (route) => {
             break;
         case 'dashboard':
             dashboard();
-            download();
+            // download();
             break;
         default:
             break;
