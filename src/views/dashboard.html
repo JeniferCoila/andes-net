@@ -32,16 +32,27 @@
             <div class="col-4">
                 <label for="planesSelect" class="form-label">Planes</label>
                 <select class="form-select" id="planesSelect" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="Internet 100% Fibra Promocional 100 Mbps">Internet 100% Fibra Promocional 100 Mbps
+                    </option>
+                    <option value="Internet 100% Fibra Promocional 200 Mbps">Internet 100% Fibra Promocional 200 Mbps
+                    </option>
+                    <option selected value="Internet 100% Fibra Promocional 300 Mbps">Internet 100% Fibra Promocional
+                        300 Mbps
+                    </option>
+                    <option value="Internet 100% Fibra Promocional 400 Mbps">Internet 100% Fibra Promocional 400 Mbps
+                    </option>
+                    <option value="Internet 100% Fibra 600 Mbps">Internet 100% Fibra 600 Mbps</option>
+                    <option value="Internet 100% Fibra 800 Mbps">Internet 100% Fibra 800 Mbps</option>
                 </select>
             </div>
             <div class="col-12 mt-4 mb-4">
                 <button type="button" class="btn btn-success">Guardar</button>
             </div>
         </div>
+    </div>
+
+    <div class="mb-4 formulario">
+        <button class="btn btn-success" onclick="exportToExcel()">Exportar a Excel las promociones</button>
     </div>
 
     <div>
@@ -51,8 +62,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.2.1/exceljs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
     <script src="/js/components/dashboard.js" defer></script>
+    <script src="/js/download.js" defer></script>
 </body>
 
 </html>

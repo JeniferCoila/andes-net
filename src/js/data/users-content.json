@@ -7,7 +7,7 @@
         "velocity": "100",
         "plan_price": "89",
         "plan_prom_price": "80",
-        "plan_name": "INTERNET 100% FIBRA"
+        "plan_name": "Internet 100% Fibra Promocional 100 Mbps"
     },
     {
         "id_register": 2,
@@ -17,7 +17,7 @@
         "velocity": "200",
         "plan_price": "119",
         "plan_prom_price": "107",
-        "plan_name": "INTERNET 100% FIBRA"
+        "plan_name": "Internet 100% Fibra Promocional 200 Mbps"
     },
     {
         "id_register": 3,
@@ -27,7 +27,7 @@
         "velocity": "300",
         "plan_price": "139",
         "plan_prom_price": "125",
-        "plan_name": "INTERNET 100% FIBRA"
+        "plan_name": "Internet 100% Fibra Promocional 300 Mbps"
     },
     {
         "id_register": 4,
@@ -37,7 +37,7 @@
         "velocity": "400",
         "plan_price": "159",
         "plan_prom_price": "139",
-        "plan_name": "INTERNET 100% FIBRA"
+        "plan_name": "Internet 100% Fibra Promocional 400 Mbps"
     },
     {
         "id_register": 5,
@@ -47,7 +47,7 @@
         "velocity": "600",
         "plan_price": "189",
         "plan_prom_price": "",
-        "plan_name": "INTERNET 100% FIBRA"
+        "plan_name": "Internet 100% Fibra 600 Mbps"
     },
     {
         "id_register": 6,
@@ -57,6 +57,6 @@
         "velocity": "800",
         "plan_price": "199",
         "plan_prom_price": "",
-        "plan_name": "INTERNET 100% FIBRA"
+        "plan_name": "Internet 100% Fibra 800 Mbps"
     }
 ]
