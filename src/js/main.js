@@ -46,7 +46,6 @@ const loadComponents = (route) => {
 const redirectLogin = () => {
     const userData = sessionStorage.getItem("user-andesnet");
     const route = window.location.hash;
-    console.log(route)
     if (!userData && route !== "#login" && route !== "") {
       alert("No se ha iniciado sesión");
       window.location.href =
