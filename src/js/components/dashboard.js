@@ -6,7 +6,7 @@ if (!datosString) {
 }
 
 async function fetchJsonData() {
-    const response = await fetch('/src/js/data/users-content.json');
+    const response = await fetch('/js/data/users-content.json');
     const data = await response.json();
     return data;
 }
@@ -18,11 +18,13 @@ const gridOptions = {
     columnDefs: [
         {
             field: "id_register",
-            headerName: "Id"
+            headerName: "Id",
+            editable: false,
         },
         {
             field: "client_id",
-            headerName: "Dni cliente"
+            headerName: "Dni cliente",
+            editable: false
         },
         {
             field: "phone",
@@ -30,7 +32,8 @@ const gridOptions = {
         },
         {
             headerName: "Fecha de registro",
-            valueGetter: (param) => convertirFecha(param.data.dateRegister)
+            valueGetter: (param) => convertirFecha(param.data.dateRegister),
+            editable: false
         },
         {
             field: "velocity",
@@ -47,8 +50,6 @@ const gridOptions = {
         {
             field: "plan_name",
             headerName: "Nombre del plan",
-            editable: true,
-            flex: 1,
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
                 values: [
@@ -66,14 +67,19 @@ const gridOptions = {
             cellRenderer: actionsCellRenderer,
             filter: false,
             sorted: false,
+            editable: false
         },
     ],
     defaultColDef: {
         filter: "agTextColumnFilter",
         floatingFilter: true,
+        editable: true,
+        cellDataType: false,
+        singleClickEdit: false,
     },
+    editType: "fullRow",
     rowSelection: "multiple",
-    suppressRowClickSelection: true,
+    suppressRowClickSelection: false,
     pagination: true,
     paginationPageSize: 10,
     paginationPageSizeSelector: [10, 25, 50],
@@ -88,8 +94,26 @@ function actionsCellRenderer(params) {
     editButton.type = 'button';
     editButton.innerHTML = 'Editar';
     editButton.addEventListener('click', () => {
+        gridApi.setFocusedCell(params.rowIndex, "plan_name");
+        gridApi.startEditingCell({
+            rowIndex: params.rowIndex,
+            colKey: "plan_name",
+        });
+
+        container.innerHTML = '';
+
+        let saveButton = document.createElement('button');
+        saveButton.className = 'btn btn-success btn-sm';
+        saveButton.type = 'button';
+        saveButton.innerHTML = 'Guardar';
+        saveButton.addEventListener('click', () => {
+            gridApi.stopEditing();
+            container.innerHTML = '';
+            container.appendChild(editButton);
+            container.appendChild(deleteButton);
+        });
+        container.appendChild(saveButton);
     });
-    container.appendChild(editButton);
 
     let deleteButton = document.createElement('button');
     deleteButton.className = 'btn btn-danger btn-sm';
@@ -98,12 +122,15 @@ function actionsCellRenderer(params) {
     deleteButton.addEventListener('click', () => {
         gridApi.applyTransaction({ remove: [params.node.data] });
     });
+
+    container.appendChild(editButton);
     container.appendChild(deleteButton);
     return container;
 }
 
 data = fetchJsonData().then((data) => {
     if (data.length > 0) {
+        data.sort
         gridOptions.rowData = data;
         lastId = data[data.length - 1].id_register;
     }

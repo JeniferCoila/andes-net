@@ -1,56 +1,55 @@
 export default () => {
-    class Modal {
-      constructor() {
-        
-        this.modalOpener = document.querySelectorAll(".modal-opener");
-        this.modalCtn = document.querySelector(".a-modal-container");
-        this.closeModalItem = this.modalCtn.querySelector(".close");
-        console.log('words', this.modalOpener)
+  class Modal {
+    constructor() {
 
-      }
+      this.modalOpener = document.querySelectorAll(".modal-opener");
+      this.modalCtn = document.querySelector(".a-modal-container");
+      this.closeModalItem = this.modalCtn.querySelector(".close");
+      console.log('words', this.modalOpener)
 
-      openModal() {
+    }
 
-        const $this = this;
+    openModal() {
 
-        for (let i = 0; i <  this.modalOpener.length; i++) {
-            const modal = this.modalOpener[i];
-            modal.addEventListener('click', function(event) {
-                const btnCard = event.target.parentElement;
-                const chosenPlan = btnCard.dataset.plan;
-                if(chosenPlan) {
-                    $this.modalCtn.querySelector('input[name="plan"]').dataset.plan = chosenPlan;
-                }
-                $this.modalCtn.style.display = "block";
-            })
-        }
-      }
-      
-      closeModal() {
-        const $this = this;
+      const $this = this;
 
-        $this.closeModalItem.addEventListener('click', function() {
-            $this.modalCtn.style.display = "none";
+      for (let i = 0; i < this.modalOpener.length; i++) {
+        const modal = this.modalOpener[i];
+        modal.addEventListener('click', function (event) {
+          const btnCard = event.target.parentElement;
+          const chosenPlan = btnCard.dataset.plan;
+          if (chosenPlan) {
+            $this.modalCtn.querySelector('input[name="plan"]').dataset.plan = chosenPlan;
+          }
+          $this.modalCtn.style.display = "block";
         })
       }
+    }
 
-      clickAny() {
-        const $this = this;
+    closeModal() {
+      const $this = this;
 
-        window.onclick = function(event) {
-            if (event.target == $this.modalCtn) {
-                $this.modalCtn.style.display = "none";
-            }
-          }
-      }
+      $this.closeModalItem.addEventListener('click', function () {
+        $this.modalCtn.style.display = "none";
+      })
+    }
 
-      load() {
-        this.openModal();
-        this.closeModal();
-        this.clickAny();
+    clickAny() {
+      const $this = this;
+
+      window.onclick = function (event) {
+        if (event.target == $this.modalCtn) {
+          $this.modalCtn.style.display = "none";
+        }
       }
     }
-  
-    new Modal().load();
-  };
-  
+
+    load() {
+      this.openModal();
+      this.closeModal();
+      this.clickAny();
+    }
+  }
+
+  new Modal().load();
+};
