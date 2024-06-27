@@ -1,3 +1,5 @@
+import modal from "./modal.js";
+
 export default () => {
     class Cards {
     constructor() {
@@ -25,6 +27,7 @@ export default () => {
     setCards(cards) {
       const contentCards = this.getContent(cards);
       this.cardContainer.innerHTML = contentCards;
+      modal();
     }
 
     getContent(cards) {

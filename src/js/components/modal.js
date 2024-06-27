@@ -5,6 +5,8 @@ export default () => {
         this.modalOpener = document.querySelectorAll(".modal-opener");
         this.modalCtn = document.querySelector(".a-modal-container");
         this.closeModalItem = this.modalCtn.querySelector(".close");
+        console.log('words', this.modalOpener)
+
       }
 
       openModal() {
@@ -19,7 +21,6 @@ export default () => {
                 if(chosenPlan) {
                     $this.modalCtn.querySelector('input[name="plan"]').dataset.plan = chosenPlan;
                 }
-                
                 $this.modalCtn.style.display = "block";
             })
         }

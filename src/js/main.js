@@ -2,7 +2,6 @@
 import { Controller } from './controller/index.js';
 import cards from "./components/cards.js";
 import form from "./components/form.js";
-import modal from "./components/modal.js";
 import slider from "./components/slider.js";
 import login from "./components/login.js";
 
@@ -28,7 +27,6 @@ const loadComponents = (route) => {
             cards();
             form('form-banner');
             form('form-modal');
-            modal();
             slider();
             break;
         case 'login':
