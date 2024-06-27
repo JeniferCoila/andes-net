@@ -1,5 +1,5 @@
 export default () => {
-  class Cards {
+    class Cards {
     constructor() {
       this.cardContainer = document.querySelector(".andesnet-plans__cards .swiper-wrapper");
     }

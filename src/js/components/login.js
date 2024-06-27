@@ -30,14 +30,14 @@ export default () => {
           'Credenciales incorrectas. Prueba con "admin" como usuario y contraseña.'
         );
       } else {
-        this.redirectTo('dashboard');
+        this.redirectTo('#dashboard');
       }
 
     }
 
     redirectTo(hash) {
       const baseUrl = window.location.origin + window.location.pathname;
-      window.location.href = baseUrl + "#" + hash;
+      window.location.href = baseUrl + hash;
     }
   }
   new Login();
