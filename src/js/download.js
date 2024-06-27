@@ -1,5 +1,5 @@
 async function fetchJsonData() {
-    const response = await fetch('/js/data/cards-content.json');
+    const response = await fetch('../js/data/cards-content.json');
     const data = await response.json();
     return data;
 }
