@@ -7,8 +7,9 @@ if (!datosString) {
 
 let lastId = 1;
 let gridApi;
+rowDataAux = datosString.length > 0 ? datosString : [];
 const gridOptions = {
-    rowData: [],
+    rowData: rowDataAux,
     columnDefs: [
         {
             headerName: "Id",
@@ -128,7 +129,6 @@ function actionsCellRenderer(params) {
     return container;
 }
 
-gridOptions.rowData = datosString;
 gridApi = agGrid.createGrid(document.querySelector("#myGrid"), gridOptions);
 
 function validar(dni, celular, planes) {
@@ -191,9 +191,103 @@ document.addEventListener('DOMContentLoaded', () => {
             plan_name: planes
         };
 
-        gridApi.applyTransaction({ add: [newData] });
+        rowDataAux.push(newData)
+        gridApi.setRowData(rowDataAux);
         document.getElementById('dniInput').value = '';
         document.getElementById('celularInput').value = '';
         document.getElementById('planesSelect').value = '1';
     });
 });
+
+
+async function exportTableToExcel() {
+    const fontPrincipal = { name: "Arial", size: 12, bold: true, color: { argb: "ffffff" } };
+    const centeredHeader = { vertical: "middle", horizontal: "center" };
+    const headerFill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '03318C' } };
+    let positionTable = 3;
+
+    const jsonData = rowDataAux;
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('Datos');
+
+    worksheet.getCell(`A1`).value = "ANDESNET";
+    worksheet.getCell(`A1`).font = { name: "Arial", size: 16, bold: true, color: { argb: "000000" } }
+
+    function setHeaderProperties(cell) {
+        cell.font = fontPrincipal;
+        cell.alignment = centeredHeader;
+        cell.fill = headerFill;
+    }
+
+    setHeaderProperties(worksheet.getCell(`A${positionTable}`));
+    worksheet.getCell(`A${positionTable}`).value = "Item";
+
+    setHeaderProperties(worksheet.getCell(`B${positionTable}`));
+    worksheet.getCell(`B${positionTable}`).value = "DNI Cliente";
+
+    setHeaderProperties(worksheet.getCell(`C${positionTable}`));
+    worksheet.getCell(`C${positionTable}`).value = "Celular";
+
+    setHeaderProperties(worksheet.getCell(`D${positionTable}`));
+    worksheet.getCell(`D${positionTable}`).value = "Fecha de registro";
+
+    setHeaderProperties(worksheet.getCell(`E${positionTable}`));
+    worksheet.getCell(`E${positionTable}`).value = "Velocidad";
+
+    setHeaderProperties(worksheet.getCell(`F${positionTable}`));
+    worksheet.getCell(`F${positionTable}`).value = "Precio del Plan";
+
+    setHeaderProperties(worksheet.getCell(`G${positionTable}`));
+    worksheet.getCell(`G${positionTable}`).value = "Precio Promoción del Plan";
+
+    setHeaderProperties(worksheet.getCell(`H${positionTable}`));
+    worksheet.getCell(`H${positionTable}`).value = "Nombre del Plan";
+
+    positionTable += 1;
+    correlativo = 1;
+    jsonData.forEach(item => {
+        worksheet.addRow(item);
+        worksheet.getCell(`A${positionTable + item}`).value = correlativo++;
+        worksheet.getCell(`A${positionTable + item}`).alignment = { vertical: "middle", horizontal: "center" };
+
+        worksheet.getCell(`B${positionTable + item}`).value = item.client_id;
+        worksheet.getCell(`B${positionTable + item}`).alignment = { vertical: "middle", horizontal: "center" };
+
+        worksheet.getCell(`C${positionTable + item}`).value = item.phone;
+        worksheet.getCell(`C${positionTable + item}`).alignment = { vertical: "middle", horizontal: "center" };
+
+        worksheet.getCell(`D${positionTable + item}`).value = convertirFecha(obtenerFechaActual(new Date(item.dateRegister) * 1000));
+        worksheet.getCell(`D${positionTable + item}`).alignment = { vertical: "middle", horizontal: "center" };
+
+        worksheet.getCell(`E${positionTable + item}`).value = item.velocity;
+        worksheet.getCell(`E${positionTable + item}`).alignment = { vertical: "middle", horizontal: "center" };
+
+        worksheet.getCell(`F${positionTable + item}`).value = Number(item.plan_price).toFixed(2);
+        worksheet.getCell(`F${positionTable + item}`).alignment = { vertical: "middle", horizontal: "right" };
+
+        worksheet.getCell(`G${positionTable + item}`).value = Number(item.plan_prom_price).toFixed(2);
+        worksheet.getCell(`G${positionTable + item}`).alignment = { vertical: "middle", horizontal: "right" };
+
+        worksheet.getCell(`H${positionTable + item}`).value = item.plan_name;
+        worksheet.getCell(`H${positionTable + item}`).alignment = { vertical: "middle", horizontal: "center" };
+
+        positionTable++;
+    });
+
+    worksheet.getColumn("A").width = 10;
+    worksheet.getColumn("B").width = 20;
+    worksheet.getColumn("C").width = 30;
+    worksheet.getColumn("D").width = 40;
+    worksheet.getColumn("E").width = 20;
+    worksheet.getColumn("F").width = 35;
+    worksheet.getColumn("G").width = 50;
+    worksheet.getColumn("H").width = 80;
+
+    workbook.xlsx.writeBuffer().then(buffer => {
+        const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'Andesnet.xlsx';
+        link.click();
+    });
+}
