@@ -6,12 +6,11 @@ export default () => {
         username: "admin",
         password: "admin",
       };
-
       // Obtener referencias a elementos del DOM
       this.loginForm = document.getElementById("andesnet-login-form");
       this.usernameInput = document.getElementById("andesnet-login-username");
       this.passwordInput = document.getElementById("andesnet-login-password");
-
+      this.errorMessage = this.loginForm.querySelector('.error-message');
       // Asociar eventos
       this.loginForm.addEventListener("submit", this.handleLogin.bind(this));
 
@@ -26,9 +25,7 @@ export default () => {
 
       // Validar usuario de prueba (admin admin)
       if (username !== this.adminUser.username || password !== this.adminUser.password) {
-        alert(
-          'Credenciales incorrectas. Prueba con "admin" como usuario y contraseña.'
-        );
+        this.errorMessage.innerHTML = "Credenciales inválidas, intente con admin | admin"
       } else {
         this.redirectTo('#dashboard');
       }
