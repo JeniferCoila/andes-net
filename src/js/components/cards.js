@@ -1,5 +1,7 @@
+import modal from "./modal.js";
+
 export default () => {
-  class Cards {
+    class Cards {
     constructor() {
       this.cardContainer = document.querySelector(".andesnet-plans__cards .swiper-wrapper");
     }
@@ -25,6 +27,7 @@ export default () => {
     setCards(cards) {
       const contentCards = this.getContent(cards);
       this.cardContainer.innerHTML = contentCards;
+      modal();
     }
 
     getContent(cards) {

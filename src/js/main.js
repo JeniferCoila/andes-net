@@ -2,7 +2,6 @@
 import { Controller } from './controller/index.js';
 import cards from "./components/cards.js";
 import form from "./components/form.js";
-import modal from "./components/modal.js";
 import slider from "./components/slider.js";
 import login from "./components/login.js";
 
@@ -12,6 +11,7 @@ const controller = new Controller();
 const handleLocationChange = async () => {
     const hash = window.location.hash.slice(1);
     const route = controller.getRouteFromPath(hash) || ''; // Ruta por defecto es ''
+
     // Cargar contenido principal
     await controller.loadContent(route);
 
@@ -21,17 +21,16 @@ const handleLocationChange = async () => {
 };
 
 // Función para cargar componentes según la ruta
-const loadComponents = async (route) => {
+const loadComponents = (route) => {
     switch (route) {
         case 'home':
-            await cards();
-            await form('form-banner');
-            await form('form-modal');
-            await modal();
-            await slider();
+            cards();
+            form('form-banner');
+            form('form-modal');
+            slider();
             break;
         case 'login':
-            await login();
+            login();
             break;
         case '/contact':
             break;
