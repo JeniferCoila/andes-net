@@ -75,7 +75,7 @@ export default () => {
                 <small class="card--price-disclaimer">
                 ${(dataC.prom_enabled ? `A partir del 4to mes: s/${dataC.price}`: ``)}
                  </small>
-                <button class="card--price-btn modal-opener" data-plan=${dataC.vel}>
+                <button class="card--price-btn modal-opener a-button" data-plan=${dataC.vel}>
                     <span>
                         LO QUIERO
                     </span>

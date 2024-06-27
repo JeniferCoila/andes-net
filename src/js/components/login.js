@@ -31,7 +31,7 @@ export default () => {
           usernam: username,
           password: password
         })
-        this.redirectTo('views/dashboard.html');
+        this.redirectTo('#dashboard');
       }
 
     }
