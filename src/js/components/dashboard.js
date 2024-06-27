@@ -1,25 +1,21 @@
-const datosString = localStorage.getItem('datosParaVentanaNueva');
-console.log(datosString);
+const datosString = JSON.parse(localStorage.getItem('register'));
 
 if (!datosString) {
-    //window.location.href = '/login.html';
+    window.location.href = '';
+    alert("Ingrese información para llamarlo")
 }
 
-async function fetchJsonData() {
-    const response = await fetch('/js/data/users-content.json');
-    const data = await response.json();
-    return data;
-}
-
-let lastId = 0;
+let lastId = 1;
 let gridApi;
 const gridOptions = {
     rowData: [],
     columnDefs: [
         {
-            field: "id_register",
             headerName: "Id",
             editable: false,
+            valueGetter: () => {
+                return lastId;
+            },
         },
         {
             field: "client_id",
@@ -32,7 +28,10 @@ const gridOptions = {
         },
         {
             headerName: "Fecha de registro",
-            valueGetter: (param) => convertirFecha(param.data.dateRegister),
+            valueGetter: (param) => {
+                const fech = obtenerFechaActual(param.data.dateRegister * 1000);
+                return convertirFecha(fech);
+            },
             editable: false
         },
         {
@@ -53,14 +52,15 @@ const gridOptions = {
             cellEditor: "agSelectCellEditor",
             cellEditorParams: {
                 values: [
-                    "Velocidad 100 % FIBRA",
-                    "Velocidad 200 % FIBRA",
-                    "Velocidad 300 % FIBRA",
-                    "Velocidad 400 % FIBRA",
-                    "Velocidad 600 % FIBRA",
-                    "Velocidad 800 % FIBRA"
+                    "Internet 100% Fibra Promocional 100 Mbps",
+                    "Internet 100% Fibra Promocional 200 Mbps",
+                    "Internet 100% Fibra Promocional 300 Mbps",
+                    "Internet 100% Fibra Promocional 400 Mbps",
+                    "Internet 100% Fibra 600 Mbps",
+                    "Internet 100% Fibra 800 Mbps"
                 ],
             },
+            minWidth: 300,
         },
         {
             headerName: "Acciones",
@@ -128,14 +128,8 @@ function actionsCellRenderer(params) {
     return container;
 }
 
-data = fetchJsonData().then((data) => {
-    if (data.length > 0) {
-        data.sort
-        gridOptions.rowData = data;
-        lastId = data[data.length - 1].id_register;
-    }
-    gridApi = agGrid.createGrid(document.querySelector("#myGrid"), gridOptions);
-});
+gridOptions.rowData = datosString;
+gridApi = agGrid.createGrid(document.querySelector("#myGrid"), gridOptions);
 
 function validar(dni, celular, planes) {
     if (dni == "" || celular == "" || planes == "") {
@@ -154,8 +148,8 @@ function convertirFecha(fecha) {
     return fechaFormateada;
 }
 
-function obtenerFechaActual() {
-    const fecha = new Date();
+function obtenerFechaActual(fechaAux) {
+    const fecha = fechaAux === undefined ? new Date() : new Date(fechaAux);
     const año = fecha.getFullYear();
     const mes = (fecha.getMonth() + 1).toString().padStart(2, '0');
     const dia = fecha.getDate().toString().padStart(2, '0');
@@ -179,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id_register: ++lastId,
             client_id: dni,
             phone: celular,
-            dateRegister: obtenerFechaActual(),
+            dateRegister: new Date() / 1000,
             velocity: '',
             plan_price: '',
             plan_prom_price: '',
