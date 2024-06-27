@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/JeniferCoila/andesnet#readme",
   "dependencies": {
-    "firebase-tools": "^13.4.1",
+    "firebase-tools": "^13.12.0",
     "swiper": "^11.0.7"
   }
 }

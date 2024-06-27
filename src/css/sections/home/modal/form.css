@@ -23,24 +23,6 @@
     height: 60px;
 }
 
-.andesnet-banner-form__content input {
-    width: 200px;
-    height: 40px;
-    border-radius: 8px;
-    border: 1px solid #989898;
-    padding: 5px 10px;
-    font-size: 14px;
-    color: #989898;
-    font-weight: 400;
-    line-height: 17px;
-
-
-}
-
-.andesnet-banner-form__content input:focus-visible {
-    border: 1px solid rgba(152, 152, 152, 1);
-    outline-color: unset;
-}
 
 
 .andesnet-banner-form__btn button {
