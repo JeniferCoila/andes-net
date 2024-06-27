@@ -4,6 +4,7 @@ import cards from "./components/cards.js";
 import form from "./components/form.js";
 import slider from "./components/slider.js";
 import login from "./components/login.js";
+import dashboard from "./components/dashboard.js";
 
 const controller = new Controller();
 
@@ -32,7 +33,8 @@ const loadComponents = (route) => {
         case 'login':
             login();
             break;
-        case '/contact':
+        case 'dashboard':
+            dashboard();
             break;
         default:
             break;
@@ -44,6 +46,3 @@ window.addEventListener('popstate', handleLocationChange);
 
 // Manejar carga inicial de la página
 document.addEventListener('DOMContentLoaded', handleLocationChange);
-
-// Cargar vista inicial cuando se ingresa una URL directamente
-handleLocationChange();

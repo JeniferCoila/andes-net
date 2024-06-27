@@ -1,14 +1,11 @@
-body {
-    width: 98%;
-    margin: 0 auto;
-}
 
-.imagen {
+
+.andesnet-dashboard-imagen {
     width: 95%;
     margin: 0 auto;
     text-align: center;
 }
 
-.formulario {
+.andesnet-dashboard-formulario {
     text-align: center;
 }
