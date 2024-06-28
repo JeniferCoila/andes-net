@@ -1,6 +1,7 @@
 export default () => {
   class Dashboard {
     constructor() {
+      this.planesDisponibles = [];
       this.datosString = JSON.parse(localStorage.getItem("register"));
       this.btnExport = document.querySelector(".andesnet-dashboard-btn-export");
       if (!this.datosString) {
@@ -65,6 +66,7 @@ export default () => {
                 "Internet 100% Fibra 800 Mbps",
               ],
             },
+            flex: 1,
             minWidth: 300,
           },
           {
@@ -91,20 +93,36 @@ export default () => {
         onGridReady: this.onGridReady.bind(this),
       };
       this.gridApi;
+      this.loadData();
       agGrid.createGrid(document.querySelector("#myGrid"), this.gridOptions);
     }
 
     correlativoValueGetter(params) {
-        return params.node.rowIndex + 1; 
+      return params.node.rowIndex + 1;
     }
 
     onGridReady(params) {
       this.gridApi = params.api;
       this.gridColumnApi = params.columnApi;
       this.gridApi.refreshCells();
-
     }
 
+    async loadData() {
+      this.planesDisponibles = await this.fetchJsonData();
+    }
+
+    async fetchJsonData() {
+      try {
+        const response = await fetch('./js/data/planes-content.json');
+        if (!response.ok) {
+          throw new Error('Error al obtener datos');
+        }
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Error al obtener datos');
+      }
+    }
     actionsCellRenderer(params) {
       const _this = this;
       let container = document.createElement("div");
@@ -331,22 +349,25 @@ export default () => {
       const guardarBtn = document.querySelector(".btn-success");
 
       guardarBtn.addEventListener("click", () => {
-        const dni = document.getElementById("dniInput").value;
-        const celular = document.getElementById("celularInput").value;
-        const planes = document.getElementById("planesSelect").value;
+        const txtDni = document.getElementById("dniInput").value;
+        const txtCelular = document.getElementById("celularInput").value;
+        const cboPlan = document.getElementById("planesSelect").value;
 
-        if (!_this.validar(dni, celular, planes)) {
+        if (!_this.validar(txtDni, txtCelular, cboPlan)) {
           return;
         }
+
+        let planElegido = this.planesDisponibles.find(plan => plan.plan_name === cboPlan)
+
         const newData = {
           id_register: ++_this.lastId,
-          client_id: dni,
-          phone: celular,
+          client_id: txtDni,
+          phone: txtCelular,
           dateRegister: new Date() / 1000,
-          velocity: "",
-          plan_price: "",
-          plan_prom_price: "",
-          plan_name: planes,
+          velocity: planElegido.velocity,
+          plan_price: planElegido.plan_price,
+          plan_prom_price: planElegido.plan_prom_price,
+          plan_name: cboPlan,
         };
 
         _this.rowDataAux.push(newData);
