@@ -1,0 +1,56 @@
+[
+    {
+        "title": "INTERNET 100% FIBRA",
+        "vel": "100",
+        "prom_enabled": true,
+        "promocional_vel": "200",
+        "months": "x 3 meses",
+        "price": "89",
+        "prom_price": "80"
+    },
+    {
+        "title": "INTERNET 100% FIBRA",
+        "vel": "200",
+        "prom_enabled": true,
+        "promocional_vel": "400",
+        "months": "x 3 meses",
+        "price": "119",
+        "prom_price": "107"
+    },
+    {
+        "title": "INTERNET 100% FIBRA",
+        "vel": "300",
+        "prom_enabled": true,
+        "promocional_vel": "600",
+        "months": "x 3 meses",
+        "price": "139",
+        "prom_price": "125"
+    },
+    {
+        "title": "INTERNET 100% FIBRA",
+        "vel": "400",
+        "prom_enabled": true,
+        "promocional_vel": "800",
+        "months": "x 3 meses",
+        "price": "159",
+        "prom_price": "139"
+    },
+    {
+        "title": "INTERNET 100% FIBRA",
+        "vel": "600",
+        "prom_enabled": false,
+        "promocional_vel": "",
+        "months": "x 3 meses",
+        "price": "189",
+        "prom_price": ""
+    },
+    {
+        "title": "INTERNET 100% FIBRA",
+        "vel": "800",
+        "prom_enabled": false,
+        "promocional_vel": "",
+        "months": "x 3 meses",
+        "price": "199",
+        "prom_price": ""
+    }
+]

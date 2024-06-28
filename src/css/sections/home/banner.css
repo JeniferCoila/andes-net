@@ -1,0 +1,83 @@
+
+
+.andesnet-banner{
+    min-height: 400px;
+    background-color: #03318C;
+    background-image: url(../../../assets/img/andesnet-banner_bg.png);
+    background-size: cover;
+    @media screen and (min-width: 768px) {
+        height: 400px;
+    }
+}
+
+.andesnet-banner__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        height: 100%;
+    }
+}
+
+.andesnet-banner__container--text {
+    padding-bottom: 10%;
+}
+
+.andesnet-banner__container--text h1,
+.andesnet-banner__container--text h2,
+.andesnet-banner__container--text h3,
+.andesnet-banner__container--text span,
+.andesnet-banner__container--text p{
+    color: #fff;
+    margin: 0;
+}
+
+.andesnet-banner__container--text h1.andesnet-banner__title {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 45px;
+    margin-bottom: 10px;
+}
+
+h1.andesnet-banner__title p {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+}
+
+h1.andesnet-banner__title span {
+    font-family: "League Spartan", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+h2.andesnet-banner__offer {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 49px;
+    color: #EFC42C;
+}
+
+h3.andesnet-banner__dscto {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 49px;
+}
+
+h3.andesnet-banner__dscto span {
+    color: #000;
+    border-radius: 15px;
+    background-color: #EFC42C;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

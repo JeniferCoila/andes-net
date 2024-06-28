@@ -1,0 +1,10 @@
+@import url(./banner.css);
+@import url(./benefits.css);
+@import url(./callus.css);
+@import url(./info.css);
+@import url(./plans.css);
+@import url(./why.css);
+
+@import url(./floating.css);
+@import url(modal/modal.css);
+@import url(modal/form.css);

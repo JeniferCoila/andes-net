@@ -1,0 +1,53 @@
+
+.andesnet-info{
+    padding: 20px 0px 20px 0px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    height: 670px;
+    background-color: #F2F2F254;
+    @media screen and (min-width: 1024px) {
+        height: 300px;
+    }
+}
+
+.andesnet-info .a-container {
+    padding: 0;
+}
+
+.andesnet-info .a-container p{
+    font-size: 18px;
+    width: 400;
+    line-height: 26px;
+    color:  #000000;
+}
+.andesnet-info .a-container h3{ 
+    color: #034C8C;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.andesnet-info .andesnet-info__container--text{
+    display: flex;
+    @media screen and (min-width: 1024px) {
+        max-width: 55%;
+    }
+}
+
+.andesnet-info .andesnet-info__container--imagen{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @media screen and (min-width: 1024px) {
+        bottom: auto;
+        top: 0;
+    }
+}
+.andesnet-info__container--text .text{
+    text-align: center;
+    padding: 20px, 0px, 20px, 0px;
+}
+

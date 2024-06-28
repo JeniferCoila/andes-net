@@ -1,15 +1,16 @@
-@import url(sections/banner.css);
-@import url(sections/benefits.css);
-@import url(sections/callus.css);
-@import url(sections/footer.css);
-@import url(sections/info.css);
-@import url(sections/nav.css);
-@import url(sections/plans.css);
-@import url(sections/why.css);
 
+@import url(sections/nav.css);
+@import url(sections/footer.css);
+@import url(sections/dashboard.css);
+
+@import url(sections/home/index.css);
+@import url(sections/login/index.css);
+@import url(sections/login/index.css);
 * {
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
+
 
 body {
     padding: 0;
@@ -17,12 +18,115 @@ body {
     line-height: 22px;
     min-width: 300px;
     background-color: #fff;
-    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    max-width: 100%;
 }
 
 .a-container {
     max-width: 1200px;
     margin: auto;
+    padding: 60px 0;
     height: 100%;
+    overflow: hidden;
 }
 
+.a-tc--blue {
+    color: #03318C;
+}
+
+.a-tc--black {
+    color: #000;
+}
+
+.a-tc--white {
+    color: #fff;
+}
+
+.a-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.a-button {
+    min-width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #034C8C;
+    padding: 8px;
+    border: 1px solid #034C8C;
+    cursor: pointer;
+}
+
+button span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #fff;
+}
+
+.swiper-pagination {
+    bottom: -10% !important;
+}
+
+.andesnet-bullet.swiper-pagination-bullet-active {
+    background-color: #03318C !important;
+
+}
+.andesnet-bullet.swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    background-color: #D9D9D9;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    color: #03318C;
+}
+
+.swiper-button-prev {
+    left: -5%;
+}
+
+.swiper-button-next {
+    right: -5%;
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.fadeLeft {
+    animation: fadeLeft 1s ease forwards;
+  }
+
+  
+form input {
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #989898;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #989898;
+    font-weight: 400;
+    line-height: 17px;
+
+
+}
+
+form input:focus-visible {
+    border: 1px solid rgba(152, 152, 152, 1);
+    outline-color: unset;
+}
+  

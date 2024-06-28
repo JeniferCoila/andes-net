@@ -1,0 +1,34 @@
+.andesnet-nav {
+    height: 76px;
+
+}
+.andesnet-nav .andesnet-nav__container{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.andesnet-nav__container--main {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+header nav .andesnet-nav__container-phone a{
+    text-decoration: none;
+}
+
+
+header nav .andesnet-nav__container-phone span{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 40px;
+}
+header nav .andesnet-nav__container-phone h3{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 40px;
+}
+

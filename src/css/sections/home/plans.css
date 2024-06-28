@@ -1,0 +1,172 @@
+.andesnet-plans {
+    overflow: hidden;
+}
+
+.andesnet-plans__container {
+    padding: 65px 0;
+}
+
+.andesnet-plans h3,
+.andesnet-plans h4,
+.andesnet-plans p {
+    margin: 0;
+}
+
+/* .andesnet-plans__cards .swiper-wrapper {
+    overflow: hidden;
+} */
+
+
+.andesnet-plans__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+}
+
+.andesnet-plans__cards {
+    position: relative;    
+}
+
+.andesnet-plans__card {
+    text-align: center;
+    max-width: 270px;
+    min-height: 507px;
+    padding: 32px 0;
+    border: 1px solid #034C8C4D;
+    border-radius: 10px;
+}
+
+.andesnet-plans__card.no-promo .card--title {
+    height: 53px;
+}
+
+.andesnet-plans__card.no-promo .card--price {
+    margin-bottom: 26px;
+}
+
+h3.card--title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 13px;
+}
+
+h4.card--vel {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 13px;
+    text-decoration: line-through;
+}
+
+h3.card--doublevel {
+    margin-bottom: 13px;
+}
+
+.card--doublevel-mbps {
+    font-size: 28px;
+    line-height: 20px;
+}
+
+.card--doublevel-qty {
+    font-size: 32px;
+    line-height: 20px;
+}
+
+.andesnet-plans__card-main-ribbon {
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blue-bg {
+    background-color: #034C8C;
+}
+
+.card--offer {    
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.card--offer-time {
+
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 20px;
+}
+
+.andesnet-plans__card-price {
+    margin: 25px 0;
+}
+
+.card--price {
+    position: relative;
+    width: fit-content;
+    margin: 15px auto 0;
+}
+
+.card--price-ttl {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+.card--price-amount {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.card--price-month {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.card--price-dscto {
+    top: -10px;
+    right: 0;
+    line-height: 13px;
+    position: absolute;
+    background: #EFC42C;
+    font-weight: 700;
+    padding: 2px;
+    margin: 0;
+    border-radius: 5px;
+    font-size: 8px;
+}
+
+small.card--price-disclaimer {
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 26px;
+    display: block;
+}
+
+.card--price-btn {
+    margin-top: 15px;
+    min-width: 175px;
+}
+
+.andesnet-plans__card-benefits {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card--benefits-item {
+    max-width: 72px;
+    text-align: center;
+}
+
+.card--benefits-item p {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+

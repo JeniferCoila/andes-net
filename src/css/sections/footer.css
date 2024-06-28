@@ -1,0 +1,51 @@
+.andesnet-footer {
+    height: auto;
+    @media screen and (min-width: 768px) {
+        height: 120px;
+    }
+}
+
+.a-container-andesnet-footer__container.a-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+
+.a-container-andesnet-footer__container_text-midle {
+    font-size: 18px;
+    font-weight: 550;
+    color: #000;
+    text-decoration: underline;
+}
+
+
+
+.a-container-andesnet-footer__container_section_redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.a-container-andesnet-footer__container_section_redes_icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.a-container-andesnet-footer__container_section_redes_text {
+    font-size: 18px;
+    font-weight: 550;
+    color: #000;
+}

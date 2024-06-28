@@ -1,0 +1,14 @@
+
+.imagen {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.formulario {
+    text-align: center;
+}
+
+.ag-input-field {
+    min-width: 100px;
+}

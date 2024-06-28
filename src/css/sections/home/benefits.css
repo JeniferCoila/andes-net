@@ -1,0 +1,46 @@
+.andesnet-benefits{
+    background-color: #F2F2F254;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    color: rgb(12, 12, 107);
+    height: 614px;
+    overflow: hidden;
+}
+
+.andesnet-benefits__container {
+    padding: 50px 0;
+}
+
+.andesnet-benefits--card {
+    display: flex;
+    flex-direction: column;
+    padding: 55px 50px;
+}
+
+.andesnet-benefits--card .titulo{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    height: 54px;
+}
+
+.andesnet-benefits--card .texto{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #1E1E1E;
+}
+
+.andesnet-benefits__cards {
+    position: relative;    
+}
+
+.andesnet-benefits--card {
+    min-width: 320px;
+    min-height: 370px;
+    border-radius: 20px;
+    border: 2px solid #146EA6;
+    text-align: center;
+}

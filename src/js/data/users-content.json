@@ -1,0 +1,62 @@
+[
+    {
+        "id_register": 1,
+        "client_id": "98765432",
+        "phone": "987654321",
+        "dateRegister": "2024-04-10",
+        "velocity": "100",
+        "plan_price": "89",
+        "plan_prom_price": "80",
+        "plan_name": "Internet 100% Fibra Promocional 100 Mbps"
+    },
+    {
+        "id_register": 2,
+        "client_id": "98765432",
+        "phone": "987654322",
+        "dateRegister": "2024-04-10",
+        "velocity": "200",
+        "plan_price": "119",
+        "plan_prom_price": "107",
+        "plan_name": "Internet 100% Fibra Promocional 200 Mbps"
+    },
+    {
+        "id_register": 3,
+        "client_id": "98765433",
+        "phone": "987654321",
+        "dateRegister": "2024-04-10",
+        "velocity": "300",
+        "plan_price": "139",
+        "plan_prom_price": "125",
+        "plan_name": "Internet 100% Fibra Promocional 300 Mbps"
+    },
+    {
+        "id_register": 4,
+        "client_id": "98765434",
+        "phone": "987654321",
+        "dateRegister": "2024-04-10",
+        "velocity": "400",
+        "plan_price": "159",
+        "plan_prom_price": "139",
+        "plan_name": "Internet 100% Fibra Promocional 400 Mbps"
+    },
+    {
+        "id_register": 5,
+        "client_id": "98765435",
+        "phone": "987654321",
+        "dateRegister": "2024-04-10",
+        "velocity": "600",
+        "plan_price": "189",
+        "plan_prom_price": "",
+        "plan_name": "Internet 100% Fibra 600 Mbps"
+    },
+    {
+        "id_register": 6,
+        "client_id": "98765436",
+        "phone": "987654321",
+        "dateRegister": "2024-04-10",
+        "velocity": "800",
+        "plan_price": "199",
+        "plan_prom_price": "",
+        "plan_name": "Internet 100% Fibra 800 Mbps"
+    }
+]
