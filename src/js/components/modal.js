@@ -5,7 +5,6 @@ export default () => {
       this.modalOpener = document.querySelectorAll(".modal-opener");
       this.modalCtn = document.querySelector(".a-modal-container");
       this.closeModalItem = this.modalCtn.querySelector(".close");
-      console.log('words', this.modalOpener)
 
     }
 

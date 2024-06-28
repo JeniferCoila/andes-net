@@ -124,7 +124,6 @@ export default (form) => {
         this.registerData.dateRegister = date;
         this.registerData.id_register = "id" + Math.random().toString(16).slice(2);
         this.registerData.velocity = this.formBanner.querySelector('input[name="plan"]').dataset.plan;
-        // console.log(this.aea.registerData(), 'this.aea')
         this.setAditionalData(this.registerData.velocity);
       }
 
@@ -138,7 +137,6 @@ export default (form) => {
             this.registerData.plan_name = "Internet 100% Fibra " + (data.prom_enabled ? "Promocional " : "") + data.vel + " Mbps";
           }
         });
-        console.log(cardSliderData, 'cardSliderData', this.registerData)
       }
 
       sendForm() {

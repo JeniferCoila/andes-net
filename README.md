@@ -13,6 +13,12 @@ Teniendo como objetivo inicial abastecer a más de 5 mil familias en el presente
 Para tal motivo se ha decidido optar por la creación de una Landing Page la cual le permite almacenar solicitudes directas de clientes potenciales e interesados que desean contratar dicho servicio y disfrutar del mejor nivel y velocidad de navegación.
 De esta manera se establece como meta principal la conversión de 50% de clientes que se registren a través de la Landing Page - ANDESNET, creando los filtros necesarios que permitan realizar una adecuada y eficaz evaluación, tanto al nivel crediticio como al nivel de cobertura, de todos los usuarios que se registren a través de la nuestra página web.
 
+## Vistas principales
+
+### Home : https://andesnet-4973d.web.app/
+### Login: https://andesnet-4973d.web.app/#login
+### Dashboard https://andesnet-4973d.web.app/#dashboard
+
 ## Estructura del Código
 
 ## Clase `Form`

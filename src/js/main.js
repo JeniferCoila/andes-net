@@ -4,6 +4,8 @@ import cards from "./components/cards.js";
 import form from "./components/form.js";
 import slider from "./components/slider.js";
 import login from "./components/login.js";
+import dashboard from "./components/dashboard.js";
+import download from './download.js';
 
 const controller = new Controller();
 
@@ -32,18 +34,32 @@ const loadComponents = (route) => {
         case 'login':
             login();
             break;
-        case '/contact':
+        case 'dashboard':
+            dashboard();
+            // download();
             break;
         default:
             break;
     }
 };
 
+const redirectLogin = () => {
+    const userData = sessionStorage.getItem("user-andesnet");
+    const route = window.location.hash;
+    if (!userData && route !== "#login" && route !== "") {
+      alert("No se ha iniciado sesión");
+      window.location.href =
+        window.location.origin +
+        window.location.pathname +
+        "#login";
+    } else {
+        handleLocationChange();
+    }
+  }
+
+
 // Manejar cambios en la URL sin recargar la página
-window.addEventListener('popstate', handleLocationChange);
+window.addEventListener('popstate', redirectLogin);
 
 // Manejar carga inicial de la página
-document.addEventListener('DOMContentLoaded', handleLocationChange);
-
-// Cargar vista inicial cuando se ingresa una URL directamente
-handleLocationChange();
+document.addEventListener('DOMContentLoaded', redirectLogin);
