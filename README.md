@@ -84,21 +84,21 @@ Inicializa las referencias a los elementos del DOM relacionados con el modal:
 new Modal().load();
 ```
 
-### Inicio de sesión
+## Inicio de sesión
 
 Se ha incorporado una funcionalidad de inicio de sesión accesible desde la vista principal, con el propósito de incrementar la seguridad.
 
-## Funcionalidades
+### Funcionalidades
 - **Campos de Entrada:**
   - **Usuario:** Campo de texto donde el usuario ingresa su nombre de usuario o correo electrónico.
   - **Contraseña:** Campo de texto donde el usuario ingresa su contraseña.
 - **Botón de Inicio de Sesión:** Al hacer clic en este botón, se verifica la información ingresada y, si es correcta, se permite el acceso al dashboard (panel de registros).
 
-### Dashboard
+## Dashboard
 
 Se ha implementado un CRUD (Create, Read, Update, Delete) para la gestión de registros de clientes.
 
-## Funcionalidades
+### Funcionalidades
 - **Visualización de Datos:**
   - Los datos se obtienen de la memoria del navegador y se muestran en una tabla.
   - La tabla incluye las siguientes columnas:
