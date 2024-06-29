@@ -84,4 +84,35 @@ Inicializa las referencias a los elementos del DOM relacionados con el modal:
 new Modal().load();
 ```
 
+### Inicio de sesión
+
+Se ha incorporado una funcionalidad de inicio de sesión accesible desde la vista principal, con el propósito de incrementar la seguridad.
+
+## Funcionalidades
+- **Campos de Entrada:**
+  - **Usuario:** Campo de texto donde el usuario ingresa su nombre de usuario o correo electrónico.
+  - **Contraseña:** Campo de texto donde el usuario ingresa su contraseña.
+- **Botón de Inicio de Sesión:** Al hacer clic en este botón, se verifica la información ingresada y, si es correcta, se permite el acceso al dashboard (panel de registros).
+
+### Dashboard
+
+Se ha implementado un CRUD (Create, Read, Update, Delete) para la gestión de registros de clientes.
+
+## Funcionalidades
+- **Visualización de Datos:**
+  - Los datos se obtienen de la memoria del navegador y se muestran en una tabla.
+  - La tabla incluye las siguientes columnas:
+    - **Número de Celular del Cliente:** Muestra el número de celular asociado al cliente.
+    - **DNI:** Muestra el Documento Nacional de Identidad del cliente.
+    - **Plan Elegido:** Indica el plan seleccionado por el cliente.
+    - **Precio:** Muestra el precio del plan.
+    - **Precio Promocional (si existe):** Indica el precio promocional del plan, si está disponible.
+- **Creación de Nuevos Registros:**
+  - Se ha añadido un módulo que permite la creación de nuevos registros.
+  - Este módulo solicita la entrada del DNI y el número de celular del cliente.
+- **Edición y Eliminación de Registros:**
+  - Cada registro en la tabla cuenta con botones específicos:
+    - **Botón de Editar:** Permite modificar la información del registro.
+    - **Botón de Eliminar:** Permite eliminar el registro de la tabla.
+
 
