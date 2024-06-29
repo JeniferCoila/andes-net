@@ -110,6 +110,14 @@ export default () => {
       let container = document.createElement("div");
       container.className = "d-flex justify-content-around mt-1";
 
+      function eliminarElementoDelArray(array, elemento) {
+        const index = array.findIndex(e => e.id_register === elemento.id_register);
+        if (index !== -1) {
+          array.splice(index, 1);
+        } else {
+          console.log(`Elemento con id_register = ${elemento.id_register} no encontrado.`);
+        }
+      }
       let editButton = document.createElement("button");
       editButton.className = "btn btn-warning btn-sm";
       editButton.type = "button";
@@ -133,6 +141,7 @@ export default () => {
             container.innerHTML = "";
             container.appendChild(editButton);
             container.appendChild(deleteButton);
+            eliminarElementoDelArray(this.rowDataAux, params.node.data);
           } else {
             console.error("Grid API no está disponible");
           }
