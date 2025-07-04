@@ -95,7 +95,7 @@ export default () => {
     }
 
     correlativoValueGetter(params) {
-        return params.node.rowIndex + 1; 
+      return params.node.rowIndex + 1;
     }
 
     onGridReady(params) {
