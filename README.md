@@ -1,10 +1,11 @@
 # Documentación del Proyecto Andes Net
 
 ## Integrantes
-- Rafael Anderson Ponte Gaitán (COORDINADOR)
+- Emmanuel Galas Zavaleta (COORDINADOR)
 - Jenifer Coila Farfan
-- Victor Diego Torres Corrales
+- Vicente Rodriguez Pereda
 - Jholby Samamé Segura
+- ROnald Jaime Duran
 
 ## Descripción General
 
